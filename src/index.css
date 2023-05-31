@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Fira Sans;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #18191a;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
