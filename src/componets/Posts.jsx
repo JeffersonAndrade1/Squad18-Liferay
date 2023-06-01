@@ -35,7 +35,7 @@ const Post = () => {
         <div className="user-info">
           <span className="post-info">
             <span className="post-info-user">João Guilherme </span>
-            publicou em
+            <span className="post-info-text">publicou em</span>
             <span className="post-info-community"> Galera dos games</span>
             <span className="post-info-divider"></span>
           </span>
