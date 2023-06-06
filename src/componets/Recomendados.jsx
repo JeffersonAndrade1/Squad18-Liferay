@@ -68,7 +68,7 @@ const ComunidadesComponent = () => {
 
   return (
     <div className="comunidades-container">
-      <h4>Conheça essas comunidades!</h4>
+      <h4>Conheça essas comunidades</h4>
       {comunidades.map((comunidade, index) => (
         <div className="comunidade-item" key={index}>
           <div className="aaa">
