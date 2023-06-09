@@ -2,7 +2,7 @@ import "../styles/MinhasComunidades.css"
 import Buttons from "../componets/Buttons.jsx"
 import Navbar from "../componets/Navbar.jsx"
 import Recomendados from "../componets/Recomendados.jsx"
-import Comunidades from "../componets/Comunidades.jsx"
+import ComunidadesContainer from "../componets/ComunidadesContainer.jsx"
 
 
 function MinhasComunidades() {
@@ -11,7 +11,7 @@ function MinhasComunidades() {
         <Navbar />
         <Buttons />
         <Recomendados />
-        <Comunidades />
+        <ComunidadesContainer />
     </div>
   );
 }

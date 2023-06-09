@@ -3,7 +3,8 @@ import "../styles/TelaFeed.css";
 import Buttons from "../componets/Buttons";
 import Navbar from "../componets/Navbar";
 import Recomendados from "../componets/Recomendados";
-import Posts from "../componets/Posts";
+import PostContainer from "../componets/PostContainer";
+import Post1 from "../componets/Post1";
 
 function TelaFeed() {
   return (
@@ -18,7 +19,7 @@ function TelaFeed() {
         <Recomendados />
       </div>
       <div>
-        <Posts />
+        <PostContainer />
       </div>
     </section>
   );

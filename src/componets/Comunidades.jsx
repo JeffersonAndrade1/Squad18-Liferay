@@ -1,54 +1,31 @@
-import React, { useState } from "react";
-import "../styles/Comunidades.css"
+import React from "react";
+import "../styles/Comunidades.css";
 
-const Post = () => {
-  const [liked, setLiked] = useState(false);
-  const [comment, setComment] = useState("");
-  const [comments, setComments] = useState([]);
-  const [showCommentInput, setShowCommentInput] = useState(false);
-
-  const handleLike = () => {
-    setLiked(!liked);
-  };
-
-  const handleComment = () => {
-    setShowCommentInput(!showCommentInput);
-    setComment("");
-  };
-
-  const handleAddComment = (e) => {
-    e.preventDefault();
-    if (comment.trim() !== "") {
-      setComments([...comments, { user: "Paulo Souza", comment: comment }]);
-      setComment("");
-    }
-  };
-
+const Comunidade = () => {
   return (
-    <div className="post-container2">
-      <div className="post2">
+    <div className="comunidade-container2">
+      <div className="comunidade2">
         <div className="user-info">
-          <span className="post-info">
-            <span className="post-info-user2">Clube do xadrez</span>
-            <span className="post-info-divider2"></span>
+          <span className="comunidade-info">
+            <span className="comunidade-info-user2">Galera dos games</span>
+            <span className="comunidade-info-divider2"></span>
           </span>
         </div>
-        <div className="post-content2">
+        <div className="comunidade-content2">
           <img
-            src="https://images7.alphacoders.com/415/415175.jpg"
+            src="https://i.pinimg.com/736x/ac/fd/a8/acfda88101fa9029e571343ddb431eb4.jpg"
             alt="Imagem da comunidade"
-            className="post-image2"
+            className="comunidade-image2"
           />
           <div className="divider2"></div>
         </div>
-        <div className="post-actions">
-          <button className="like-button2">
-            <p>Acessar</p>
-          </button>
+        <div className="comunidade-actions">
+          <button className="acessar-button2">Acessar</button>
+          <button className="sair-button2">Sair</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Post;
+export default Comunidade;
