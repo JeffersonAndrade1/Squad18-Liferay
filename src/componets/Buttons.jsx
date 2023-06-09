@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FiHome, FiUsers, FiSearch, FiPlus } from "react-icons/fi";
-import Buttons from "../styles/Buttons.css";
+import { Link } from "react-router-dom";
+import "../styles/Buttons.css";
 
-const HomeButton = ({ icon: Icon, text }) => {
+const HomeButton = ({ icon: Icon, text, to, className }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -14,24 +15,48 @@ const HomeButton = ({ icon: Icon, text }) => {
   };
 
   return (
-    <div
-      className={`home-button ${isHovered ? "hovered" : ""}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+    <Link to={to} className={`home-button ${isHovered ? "hovered" : ""} ${className}`}>
+      <div
+        className="button-content"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-      <Icon size={32} color="white" />
-      {isHovered && <span className="text">{text}</span>}
-    </div>
+        <div className="icon-container">
+          <Icon size={35} color="white" className="home-icon" />
+        </div>
+        <span className="text">{text}</span>
+      </div>
+    </Link>
   );
 };
 
 const ButtonContainer = () => {
   return (
     <div className="button-container">
-      <HomeButton icon={FiHome} text="Inicio" className="btnHome" />
-      <HomeButton icon={FiUsers} text="Comunidades" />
-      <HomeButton icon={FiSearch} text="Pesquisar" />
-      <HomeButton icon={FiPlus} text="Criar" />
+      <HomeButton
+        icon={FiHome}
+        text="Home"
+        to="/Feed"
+        className="btnHome"
+      />
+      <HomeButton
+        icon={FiUsers}
+        text="Comunidades"
+        to="/Comunidades"
+        className="btnComunidades"
+      />
+      <HomeButton
+        icon={FiSearch}
+        text="Pesquisa"
+        to="/Pesquisa"
+        className="btnPesquisa" 
+      />
+      <HomeButton
+        icon={FiPlus}
+        text="Criar"
+        to="/Criar"
+        className="btnCriar"
+      />
     </div>
   );
 };
