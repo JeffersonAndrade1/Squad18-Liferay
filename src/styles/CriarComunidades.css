@@ -8,13 +8,14 @@
   margin-right: auto;
   padding: 20px;
   box-sizing: border-box;
-  max-width: 500px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .criacao-container2 {
   background-color: #242526;
-  width: 100%;
-  max-width: 400px;
+  width: 90%;
+  max-width: 600px;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 5px;
